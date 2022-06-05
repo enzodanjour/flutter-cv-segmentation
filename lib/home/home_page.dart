@@ -1,4 +1,3 @@
-
 import 'package:fairfax_carros/home/components/botton_sheet.dart';
 import 'package:fairfax_carros/home/components/history_cars_widget.dart';
 import 'package:fairfax_carros/home/components/my_insurances_widget.dart';
@@ -106,7 +105,15 @@ class _HomePageState extends State<HomePage> {
           ),
           MyInsurancesWidget(
             onTap: () {
-              BottonSheet().show(context, onTap: (){});
+              BottonSheet().show(
+                context,
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    '/personal_profile',
+                  );
+                },
+              );
             },
           ),
           const SizedBox(
@@ -125,5 +132,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
