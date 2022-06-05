@@ -39,6 +39,8 @@ dependencies:
   path_provider: ^2.0.10
   linear_step_indicator: ^1.0.0+3
   camera: ^0.9.7+1
+  provider: ^6.0.3
+  dio: ^4.0.6
 
 dev_dependencies:
   flutter_test:
