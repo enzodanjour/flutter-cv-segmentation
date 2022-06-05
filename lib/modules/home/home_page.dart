@@ -1,6 +1,7 @@
-import 'package:fairfax_carros/home/components/botton_sheet.dart';
-import 'package:fairfax_carros/home/components/history_cars_widget.dart';
-import 'package:fairfax_carros/home/components/my_insurances_widget.dart';
+
+import 'package:fairfax_carros/modules/home/components/botton_sheet.dart';
+import 'package:fairfax_carros/modules/home/components/history_cars_widget.dart';
+import 'package:fairfax_carros/modules/home/components/my_insurances_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -123,7 +124,7 @@ class _HomePageState extends State<HomePage> {
             label: 'Histórico',
             onTap: () {},
           ),
-          HistoryCarsWidget(
+          const HistoryCarsWidget(
             car: 'Benz CL250',
             data: 'Faria lima | 02 Jan,2022 | 6:44AM',
           )

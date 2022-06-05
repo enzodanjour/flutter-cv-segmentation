@@ -1,8 +1,8 @@
-import 'package:camera/camera.dart';
 import 'package:fairfax_carros/core/app_colors.dart';
-import 'package:fairfax_carros/insurance/big_button.dart';
+import 'package:fairfax_carros/modules/insurance/big_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 
 class PersonalProfilePage extends StatefulWidget {
   const PersonalProfilePage({Key? key}) : super(key: key);

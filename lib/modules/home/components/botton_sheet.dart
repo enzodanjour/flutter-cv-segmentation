@@ -1,9 +1,11 @@
 
-import 'package:fairfax_carros/home/components/type_assurance_widget.dart';
+import 'package:fairfax_carros/core/app_colors.dart';
+import 'package:fairfax_carros/modules/home/components/type_assurance_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../core/app_colors.dart';
+
+
 
 class BottonSheet {
   ValueNotifier<int> indexSelected = ValueNotifier<int>(0);
