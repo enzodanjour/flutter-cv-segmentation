@@ -1,9 +1,14 @@
 import 'package:camera/camera.dart';
-import 'package:fairfax_carros/home/home_page.dart';
-import 'package:fairfax_carros/insurance/personal_profile_page.dart';
-import 'package:fairfax_carros/picture/picture_page.dart';
-import 'package:fairfax_carros/picture/picture_preview_page.dart';
+import 'package:fairfax_carros/modules/home/home_page.dart';
+import 'package:fairfax_carros/modules/insurance/personal_profile_page.dart';
+import 'package:fairfax_carros/modules/picture/controllers/picture_send_controller.dart';
+import 'package:fairfax_carros/modules/picture/picture_preview_page.dart';
+import 'package:fairfax_carros/modules/picture/result_upload_page.dart';
+import 'package:fairfax_carros/services/dio_upload_service.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'modules/picture/picture_page.dart';
 
 late List<CameraDescription> _cameras;
 
@@ -58,23 +63,42 @@ class _MyAppState extends State<MyApp> {
     if (!controller.value.isInitialized) {
       return Container();
     }
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: '/home',
-      routes: {
-        '/home': (BuildContext context) => const HomePage(),
-        '/personal_profile': (BuildContext context) =>
-            const PersonalProfilePage(),
-        '/picture_page': (BuildContext context) =>
-            PicturePage(controller: controller),
-        '/picture_preview_page': (BuildContext context) {
-          final args = ModalRoute.of(context)!.settings.arguments as String;
+    return MultiProvider(
+      providers: [
+        Provider(
+          create: (context) => DioUploadService(),
+        ),
+        ChangeNotifierProvider<PictureSendController>(
+          create: (context) => PictureSendController(
+            service: context.read<DioUploadService>(),
+          ),
+        )
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        initialRoute: '/home',
+        routes: {
+          '/home': (BuildContext context) => const HomePage(),
+          '/personal_profile': (BuildContext context) =>
+              const PersonalProfilePage(),
+          '/picture_page': (BuildContext context) =>
+              PicturePage(controller: controller),
+          '/picture_preview_page': (BuildContext context) {
+            final args = ModalRoute.of(context)!.settings.arguments as String;
             return PicturePreviewPage(path: args);
-        }
-      },
+          },
+          '/picture_send_page': (BuildContext context) {
+            final args = ModalRoute.of(context)!.settings.arguments as String;
+            return ResultUploadPage(
+              controller: context.read<PictureSendController>(),
+              path: args,
+            );
+          }
+        },
+      ),
     );
   }
 }
