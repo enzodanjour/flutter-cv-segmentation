@@ -37,6 +37,8 @@ dependencies:
   flutter_svg: ^1.1.0
   google_fonts: ^3.0.1
   path_provider: ^2.0.10
+  linear_step_indicator: ^1.0.0+3
+  camera: ^0.9.7+1
 
 dev_dependencies:
   flutter_test:
