@@ -75,12 +75,14 @@ O próximo passo foi capturar as imagens via aplicativo flutter, e envia-las par
 
 ## Profissionais responsáveis pelo projeto:
 
-- Marina Bittencourt - **Produto**
+- Enzo Danjour - **Desenvolvedor Mobile**
 
-<a href="https://www.linkedin.com/in/marinarosabittencourt/" target="_blank">
+<a href="https://github.com/enzodanjour" target="_blank">
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"> 
+<a href="https://www.linkedin.com/in/enzo-danjour/" target="_blank">
 <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
 </a>
-
+    
 - Gabriella Feliciano - **Agilista**
 
 - Leonardo Bittencourt - **Desenvolvedor Backend**
@@ -91,10 +93,13 @@ O próximo passo foi capturar as imagens via aplicativo flutter, e envia-las par
 <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
 </a>
 
-- Enzo Danjour - **Desenvolvedor Mobile**
+- Marina Bittencourt - **Produto**
 
-<a href="https://github.com/enzodanjour" target="_blank">
-<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"> 
-<a href="https://www.linkedin.com/in/enzo-danjour/" target="_blank">
+<a href="https://www.linkedin.com/in/marinarosabittencourt/" target="_blank">
 <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
 </a>
+
+
+
+
+
